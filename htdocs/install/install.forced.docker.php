@@ -19,17 +19,17 @@
 /** @var boolean	$force_install_nophpinfo 		Hide PHP information */
 $force_install_nophpinfo = true;
 
-/** @var int	$force_install_noedit 				1 = Lock and hide environment variables, 2 = Lock all set variables */
+/** @var int	$force_install_noedit 				1 = Lock and hide environment variables, 2 = Lock all set variables, 3 to block all technical parameters excepted main_url */
 $force_install_noedit = 3;
 
 /** @var string	$force_install_message	 			Information message */
 $force_install_message = 'Welcome to your Dolibarr Docker install';
 
 /** @var string	$force_install_main_data_root 		Data root absolute path (documents folder) */
-$force_install_main_data_root = null;
+$force_install_main_data_root = "/var/documents";
 
 /** @var boolean	$force_install_mainforcehttps	Force HTTPS */
-$force_install_mainforcehttps = true;
+$force_install_mainforcehttps = false;
 
 /** @var string	$force_install_database				Database name */
 $force_install_database = getenv('DOLI_DATABASE', true) ?: getenv('DOLI_DATABASE');
